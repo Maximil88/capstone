@@ -19,6 +19,7 @@ router.delete('/:id', checkAuth, (req, res) => {
     UserId: req.user.id 
   }})
     .then(numberDeleted => {
+      // if there was nothing deleted show error message
       if (numberDeleted === 0) {
         res.status(404).json({ error: 'could not find that Favorite' })
       return

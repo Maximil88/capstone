@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 var router = express.Router();
 const models = require("../models");
 
-/* GET users listing. */
+/* POST /api/v1/users/register */
 router.post('/register', function(req, res, next) {
   if (!req.body.email || !req.body.password) {
     res.status(400).json({ error: 'please include all required fields' })
