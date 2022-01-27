@@ -17,6 +17,7 @@ function NavBar() {
           <>
             <li><button href="#" onClick={() => handleLogout()}>Log Out</button></li>
             <li><Link to="/register">My Favorites</Link></li>
+            <li><Link to="/search">Search</Link></li>
           </>
         ) : (
           <>

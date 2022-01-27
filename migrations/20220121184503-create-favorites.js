@@ -11,6 +11,21 @@ module.exports = {
       ArtsyId: {
         type: Sequelize.TEXT
       },
+      name: {
+        type: Sequelize.TEXT
+      },
+      birthday: {
+        type: Sequelize.TEXT
+      },
+      nationality: {
+        type: Sequelize.TEXT
+      },
+      biography: {
+        type: Sequelize.TEXT
+      },
+      image: {
+        type: Sequelize.TEXT
+      },
       UserId: {
         type: Sequelize.INTEGER,
         references: {

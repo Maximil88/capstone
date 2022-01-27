@@ -16,6 +16,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Favorites.init({
     ArtsyId: DataTypes.TEXT,
+    name: DataTypes.TEXT,
+    birthday: DataTypes.TEXT,
+    nationality: DataTypes.TEXT,
+    biography: DataTypes.TEXT,
+    image: DataTypes.TEXT,
     UserId: DataTypes.INTEGER
   }, {
     sequelize,

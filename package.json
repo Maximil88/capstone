@@ -4,9 +4,17 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bon/www"
+    "dev": "nodemon ./bon/www",
+    "db:create": "npx sequelize-cli db:create",
+    "db:destroy": "npx sequelize-cli db:drop",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:reset": "npm run db:destroy; npm run db:setup",
+    "db:setup": "npm run db:create && npm run db:migrate && npm run db:seed",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -16,6 +24,7 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1",
+    "react-bootstrap": "^2.1.1",
     "sequelize": "^6.13.0",
     "sequelize-cli": "^6.4.1"
   }
