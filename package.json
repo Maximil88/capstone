@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bon/www",
+    "dev": "nodemon ./bin/www",
     "db:create": "npx sequelize-cli db:create",
     "db:destroy": "npx sequelize-cli db:drop",
     "db:migrate": "npx sequelize-cli db:migrate",

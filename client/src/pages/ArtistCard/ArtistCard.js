@@ -7,7 +7,6 @@ import './Style.css';
 
 export default function ArtistCard({artist}) {
   return (
-    <div>
       <Card border="dark" style={{ width: '18rem', marginBottom:'20px' }}>
         <div className='cardImgContainer'>
           <Card.Img variant="top" src={artist._links.thumbnail.href} />
@@ -17,6 +16,5 @@ export default function ArtistCard({artist}) {
           {/* <Button variant="primary" as={Link} to={artist._links.self}>Artist Page</Button> */}
         </Card.Body>
       </Card>
-    </div>
   )
 }

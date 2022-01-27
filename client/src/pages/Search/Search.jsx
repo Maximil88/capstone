@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ArtistCard from '../ArtistCard/ArtistCard';
-// import { Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 
 export const fetchArtists = (query) => { 
@@ -30,14 +30,13 @@ function Search() {
           <button type="submit" >Submit</button>
         </div>
       </form>
-    
-        {artists.map(artist => {
+        {artists.map((artist, index) => {
           return (
-            // <div><img src={artist._links.thumbnail.href} />{artist.title}</div>
-          //   // <button src={artist._links.permalink}>permalink</button></div>
-          //   <Col>
-            <ArtistCard artist={artist} />
-          //   </Col>
+            <Row>
+              <Col key={index}>
+                <ArtistCard artist={artist} />
+              </Col>
+            </Row>
           )
         })}
     </div>

@@ -16,7 +16,7 @@ const Register = () => {
       })
       .catch(err => {
         console.log(err.response)
-        alert(err.response.data.error)
+        alert(`${err.response.status} – ${err.response.statusText}`)
       })
 }
 
