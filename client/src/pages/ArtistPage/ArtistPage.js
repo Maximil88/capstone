@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Row } from "react-bootstrap";
 import './Style.css';
 
 
@@ -14,10 +15,30 @@ export default function ArtistPage({artistURL})  {
     return null
   }
   return (
-    <div>
-      {artistDetails.biography} <br />
-      <img src={artistDetails._links.image.href.replace('{image_version}', "large")} />
-    </div>
+    <div className="container mt-5 mb-5">
+      <div className="row justify-content-around">
+        <div clasNames="col-auto">
+          <div className="card">
+            
+            <div className="card-body">
+              <p className="card-text">{artistDetails.biography}</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-auto">
+          <div className="card">
+            <img
+              src={artistDetails._links.image.href.replace('{image_version}', "large")}
+              alt="art"
+            />
+            </div>
+          </div>
+        </div>
+      </div>
+    // <div>
+    //   {artistDetails.biography} <br />
+    //   <img src={artistDetails._links.image.href.replace('{image_version}', "large")} />
+    //  </div> 
   )
 }
 
