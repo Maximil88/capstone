@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import ArtistCard from '../ArtistCard/ArtistCard';
-// import { Col, Row } from 'react-bootstrap';
+import './style.css';
+import { Button, Modal, Row } from 'react-bootstrap';
+import ArtistCard from '../../components/ArtistCard/ArtistCard';
+import ArtistPage from '../ArtistPage/ArtistPage';
 
 
-export const fetchArtists = (query) => { 
+export const fetchArtists = (query) => {
   return fetch(`/api/v1/search?search=${query}`)
     .then(result => result.json())
     .then(data => data)
@@ -13,6 +15,14 @@ export const fetchArtists = (query) => {
 function Search() {
   const [search, setSearch] = useState('')
   const [artists, setArtists] = useState([])
+  const [artist, setArtist] = useState(null);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = (artist) => {
+    setShow(true)
+    setArtist(artist)
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -22,24 +32,37 @@ function Search() {
   }
 
   return (
-    <div>
+    <div className='background'>
       <form onSubmit={handleSubmit}>
-        <div className='search'>
+        <div className='search' >
           <label htmlFor="artist">Search by Atrist</label>
           <input id="artist" onChange={(e) => setSearch(e.target.value)} type="text" />
           <button type="submit" >Submit</button>
         </div>
       </form>
-    
+
+      <Row>
         {artists.map(artist => {
           return (
-            // <div><img src={artist._links.thumbnail.href} />{artist.title}</div>
-          //   // <button src={artist._links.permalink}>permalink</button></div>
-          //   <Col>
-            <ArtistCard artist={artist} />
-          //   </Col>
+            <ArtistCard artist={artist} onClick={() => { handleShow(artist) }} />
           )
         })}
+      </Row>
+
+      <Modal show={show} fullscreen={true} onHide={handleClose}>
+        {artist && (
+          <>
+            <Modal.Header closeButton>
+              <Modal.Title>{artist.title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <ArtistPage artist={artist}/>
+            </Modal.Body>
+          </>
+        )}
+
+      </Modal>
+
     </div>
   )
 }

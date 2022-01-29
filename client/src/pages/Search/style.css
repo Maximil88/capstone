@@ -1,0 +1,21 @@
+.search {
+padding: 100px;
+margin-bottom: 20px;
+}
+label {
+  font-style: oblique;
+  font-size: large;
+  padding-right: 30px;
+}
+input {
+  font-style: oblique;
+}
+
+.background {
+  margin-top: -80px;
+  height:100vh;
+  background-image: url('../../components/sistine.jpeg');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  }

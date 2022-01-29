@@ -1,0 +1,16 @@
+.cardImgContainer {
+text-align: center;
+width: 285px;
+height:285px;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+
+/* .cardImgContainer 
+display: inline-block;
+height: 100%;
+width: auto;
+} */

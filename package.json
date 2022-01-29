@@ -10,8 +10,8 @@
     "db:migrate": "npx sequelize-cli db:migrate",
     "db:reset": "npm run db:destroy; npm run db:setup",
     "db:setup": "npm run db:create && npm run db:migrate && npm run db:seed",
-    "db:seed": "npx sequelize-cli db:seed:all",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "axios": "^0.25.0",

@@ -22,4 +22,8 @@ app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/favorites', favoritesRouter);
 app.use('/api/v1/search', searchRouter);
 
+app.get('*', (req,res)=> {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'))
+})
+
 module.exports = app;

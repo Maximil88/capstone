@@ -1,0 +1,10 @@
+.navs {
+  display: flex;
+  justify-content: center;
+  
+  }
+  
+  .navs ul p {
+    display: inline-block;
+    margin-left: 16px;
+  }
