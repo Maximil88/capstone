@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import './style.css'
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('/api/v1/users/login', { email, password })
+    axios.post('/api/v1/users/register', { email, password })
       .then(res => {
-        alert('Logged in Successfully')
-        navigate('/favorites')
-        localStorage.setItem('token', res.data.token)
+        alert('Registered Successfully')
+        navigate('/login')
       })
       .catch(err => {
         console.log(err.response)
@@ -23,27 +23,27 @@ const Login = () => {
 
 
   return (
-  <div>
-    <h1>Login</h1>
+  <div >
+    <h1>Register</h1>
     <form onSubmit={(e) => handleSubmit(e)}>
       <p>
-        <label htmlfor="email">Email</label><br />
+        <label htmlFor="email">Email</label><br />
         <input type="email" id="email" 
         onChange={(e) => setEmail(e.target.value)}
         value={email}
         required/>
       </p>
       <p>
-        <label htmlfor="password">Password</label><br />
+        <label htmlFor="password">Password</label><br />
         <input type="password" id="password" 
         onChange={(e) => setPassword(e.target.value)}
         value={password}
         required/>
       </p>
-      <button type="submit">Login</button>
+      <button type="submit">Register</button>
     </form>
   </div>
   )
 };
 
-export default Login;
+export default Register;
