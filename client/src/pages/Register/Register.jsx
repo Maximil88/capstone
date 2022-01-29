@@ -23,7 +23,7 @@ const Register = () => {
 
 
   return (
-  <div >
+  <div className='background'>
     <h1>Register</h1>
     <form onSubmit={(e) => handleSubmit(e)}>
       <p>

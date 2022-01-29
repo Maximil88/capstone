@@ -1,0 +1,28 @@
+.footer{
+  margin-top: 20px;
+  padding: 0.5rem;
+  background-color: gray;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-left: 16px;
+  list-style-type: none;
+  
+}
+
+.github{
+  color: white;
+}
+
+.envelope{
+  color:white
+}
+
+li {
+  color:white;
+}

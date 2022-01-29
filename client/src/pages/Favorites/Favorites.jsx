@@ -40,7 +40,7 @@ function Favorites() {
     <h1>Favorites</h1>
     <Row>
     {favorites.map(favorite => (
-      <ArtistCard favoriteButton={false} artistTitle={favorite.name} artistImage={favorite.image}
+      <ArtistCard  artistID={favorite.id} favoriteButton={false} deleteButton={true} artistTitle={favorite.name} artistImage={favorite.image}
        artistURL={favorite.ArtsyId} onClick={() => { handleShow({title: favorite.name, URL:favorite.ArtsyId}) }}/>
     ))}
     </Row>

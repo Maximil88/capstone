@@ -15,7 +15,6 @@ export default function ArtistPage({artistURL})  {
   }
   return (
     <div>
-      {artistDetails.name}
       {artistDetails.biography} <br />
       <img src={artistDetails._links.image.href.replace('{image_version}', "large")} />
     </div>

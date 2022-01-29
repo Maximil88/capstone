@@ -13,7 +13,7 @@ const Login = () => {
     axios.post('/api/v1/users/login', { email, password })
       .then(res => {
         alert('Logged in Successfully')
-        navigate('/favorites')
+        window.location='/favorites'
         localStorage.setItem('token', res.data.token)
       })
       .catch(err => {
@@ -24,7 +24,7 @@ const Login = () => {
 
 
   return (
-  <div >
+  <div className='background'>
     <h1>Login</h1>
     <form onSubmit={(e) => handleSubmit(e)}>
       <p>

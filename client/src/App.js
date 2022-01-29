@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 import Favorites from './pages/Favorites/Favorites';
 import Home from './pages/Home/Home';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/search" element={<Search />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

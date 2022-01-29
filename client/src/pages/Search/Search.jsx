@@ -41,7 +41,7 @@ function Search() {
         </div>
       </form>
 
-      <Row>
+      <Row >
         {artists.map(artist => {
           return (
             <ArtistCard artistTitle={artist.title} artistImage={artist._links.thumbnail.href}

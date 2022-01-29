@@ -9,3 +9,7 @@ display: inline-block;
 height: 100%;
 width: auto;
 }
+
+.imgContainer {
+ align-items: center;
+}
