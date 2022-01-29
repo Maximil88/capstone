@@ -40,6 +40,8 @@ router.post('/', checkAuth, (req, res) => {
   // create a new favorite in the database
   models.Favorites.create({
     ArtsyId: req.body.ArtsyId,
+    name: req.body.name,
+    image: req.body.image,
     UserId: req.user.id
   })
     .then(favorite => {

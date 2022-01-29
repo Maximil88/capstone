@@ -3,13 +3,13 @@ import './Style.css';
 
 
 
-export default function ArtistPage({artist})  {
+export default function ArtistPage({artistURL})  {
   const [artistDetails, setArtistDetails] = useState(null)
   useEffect(() => {
-    fetch(`/api/v1/search/url?url=${artist._links.self.href}`)
+    fetch(`/api/v1/search/url?url=${artistURL}`)
     .then(result => result.json())
     .then(data => setArtistDetails(data))
-  },[artist])
+  },[artistURL])
   if (!artistDetails){
     return null
   }

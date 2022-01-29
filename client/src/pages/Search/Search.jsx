@@ -44,7 +44,8 @@ function Search() {
       <Row>
         {artists.map(artist => {
           return (
-            <ArtistCard artist={artist} onClick={() => { handleShow(artist) }} />
+            <ArtistCard artistTitle={artist.title} artistImage={artist._links.thumbnail.href}
+             artistURL={artist._links.self.href} onClick={() => { handleShow({title:artist.title, URL:artist._links.self.href}) }} />
           )
         })}
       </Row>
@@ -56,7 +57,7 @@ function Search() {
               <Modal.Title>{artist.title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <ArtistPage artist={artist}/>
+              <ArtistPage artistURL={artist.URL}/>
             </Modal.Body>
           </>
         )}

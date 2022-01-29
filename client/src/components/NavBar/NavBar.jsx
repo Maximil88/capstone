@@ -18,8 +18,9 @@ function NavBar() {
         {isLoggedIn ? (
           <>
             <p><button href="#" onClick={() => handleLogout()}>Log Out</button></p>
-            <p><Link to="/register">My Favorites</Link></p>
             <p><Link to="/search">Search</Link></p>
+            <p><Link to="/favorites">My Favorites</Link></p>
+         
 
           </>
         ) : (
