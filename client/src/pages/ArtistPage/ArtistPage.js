@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import { Row } from "react-bootstrap";
+import { useEffect, useState } from "react";
 import './Style.css';
 
 
@@ -35,10 +34,6 @@ export default function ArtistPage({artistURL})  {
           </div>
         </div>
       </div>
-    // <div>
-    //   {artistDetails.biography} <br />
-    //   <img src={artistDetails._links.image.href.replace('{image_version}', "large")} />
-    //  </div> 
   )
 }
 

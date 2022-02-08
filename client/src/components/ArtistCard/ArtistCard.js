@@ -3,9 +3,7 @@ import { Button, Card, Col,} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Style.css';
-import { DELETE } from 'sequelize/dist/lib/query-types';
 
-// <img src={artist._links.thumbnail.href} />{artist.title}
 
 export default function ArtistCard({ artistTitle, artistImage, artistURL, artistID, onClick, favoriteButton=true, deleteButton=false}) {
 
@@ -43,7 +41,7 @@ export default function ArtistCard({ artistTitle, artistImage, artistURL, artist
  
   return (
     <Col className="col1">
-      <Card border="dark" style={{ width: '287px', marginBottom: '20px',}}>
+      <Card border="dark" style={{ width: '287px', marginBottom: '60px',}}>
         <div className='cardImgContainer'>
           <Card.Img variant="top" style={{}} src={artistImage} />
         </div>

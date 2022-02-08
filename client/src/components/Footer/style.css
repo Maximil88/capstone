@@ -1,6 +1,7 @@
 .footer{
+  padding-top: 20px;
   margin-top: 20px;
-  padding: 0.5rem;
+  padding: 0.2rem;
   background-color: gray;
   position: fixed;
   bottom: 0;

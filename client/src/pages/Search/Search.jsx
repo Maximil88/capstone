@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './style.css';
-import { Button, Modal, Row } from 'react-bootstrap';
+import { Modal, Row } from 'react-bootstrap';
 import ArtistCard from '../../components/ArtistCard/ArtistCard';
 import ArtistPage from '../ArtistPage/ArtistPage';
 
