@@ -20,7 +20,11 @@ export default function ArtistPage({artistURL})  {
           <div className="card">
             
             <div className="card-body">
+              <p>{artistDetails.name} was born in {artistDetails.birthday} in {artistDetails.hometown} and passed away in {artistDetails.deathday}. This {artistDetails.nationality} artist 
+              became prominent in {artistDetails.location}.
+              </p>
               <p className="card-text">{artistDetails.biography}</p>
+              {/* <p>Similar artists include {artistDetails._links.similar_artists.href}</p> */}
             </div>
           </div>
         </div>
